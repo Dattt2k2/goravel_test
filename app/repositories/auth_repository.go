@@ -41,7 +41,7 @@ func (r *AuthRepositoryImpl) Register(email, password string) (*models.User, err
 		Email:    email,
 		Password: password,
 	}
-	if err := helpers.SetPassword(user, password); err != nil {
+	if err := helpers.HashPassword(user, password); err != nil {
 		return nil, err
 	}
 	if err := facades.Orm().Query().Create(user); err != nil {

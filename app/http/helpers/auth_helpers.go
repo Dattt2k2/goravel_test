@@ -23,7 +23,7 @@ func GetAuthPassword(u models.User) string {
 	return u.Password
 }
 
-func SetPassword(u *models.User, password string) error {
+func HashPassword(u *models.User, password string) error {
 	hasedPassword , err := facades.Hash().Make(password)
 	if err != nil {
 		return err

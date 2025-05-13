@@ -26,6 +26,7 @@ func (ctrl *AuthController) Register(ctx http.Context) http.Response {
 	validator, err := facades.Validation().Make(ctx.Request().All(), map[string]string{
 		"email":    "required|email",
 		"password": "required|min:6",
+		"type":   	"required|in:admin,user",
 	})
 
 	if err != nil {
