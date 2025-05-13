@@ -1,0 +1,37 @@
+# Compiled Go binary files
+/bin/app
+/main
+**/main
+**/*.exe
+**/*.dll
+
+# Environment variables
+.env.local
+.env.production
+.env.staging
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency directories
+/vendor/
+/node_modules/
+
+# Log files
+*.log
+
+# Temporary files
+/tmp/
+/temp/
+
+# Database files
+*.db
+*.sqlite
+
+# Go specific
+*.test
+*.out
+.DS_Store
