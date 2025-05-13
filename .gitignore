@@ -1,6 +1,8 @@
 # Compiled Go binary files
-/bin/app
+bin/app
+bin/
 /main
+main
 **/main
 **/*.exe
 **/*.dll
